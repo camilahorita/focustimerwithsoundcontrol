@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --color: #323238;
+  --colorSelForest: #323238;
+  --colorSelRain: #323238;
+  --colorSelCoffe: #323238;
+  --colorSelFire: #323238;
+}
+
+.numbers span{
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(10rem, 10rem + 2vw ,12.7rem);
+  line-height: 14.8rem;   
+}
+main {
+  display: flex;
+  gap:19.2rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 33.6rem;
+  margin-top: 18%;
+}
+
+.timer {
+  height: 21.3rem;
+  display: flex;
+  gap: 1.7rem;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.buttonsTimer {
+  display: flex;
+  gap: 4.0rem;
+  justify-content: center;
+}
+.buttonsTimer button {
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+.buttonsSounds {
+  display: grid;
+  grid-template-areas: "A B"
+  "C D";
+  gap: 3.2rem;
+}
+.buttonsSounds button {
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonsSounds .forest {
+  grid-area: "A";
+}
+
+.buttonsSounds .rain {
+  grid-area: "B";
+}
+.buttonsSounds .coffe {
+  grid-area: "C";
+}
+.buttonsSounds .fire {
+  grid-area: "D";
+}
+
+.modeN , .modeD {
+  background: transparent;
+  border: none;
+  position: absolute; 
+  top: 6rem;
+  right: 6rem;
+  cursor: pointer;
+}
+
+.displaynone {
+  display: none;
+}
+/* width="138" height="152" */
+.forest, .rain, .coffe, .fire{
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 20px;
+}
+
+.containerButtonsSound {
+  position: relative;
+}
+
+input {
+  position: absolute;
+  top: 11.2rem;
+  left: 2.4rem;
+  width: 9rem;
+  background: transparent;
+}
+
+.play, .stop, .plus, .minus {
+  height: 4.8rem;
+  border-radius: 20px;
+}
+
+input[type=range] {
+  height: 1.6rem;
+  appearance: none;
+  width: 9rem;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--color);
+  border-radius: 2.5rem;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 3rem;
+  background: var(--color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--color);
+  border-radius: 25px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 30px;
+  background: var(--color);
+  cursor: pointer;
+  border: none;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: var(--color);
+  cursor: pointer;
+}
+
+#vol-control-forest::-webkit-slider-runnable-track {
+
+  background: var(--colorSelForest);
+}
+#vol-control-forest::-webkit-slider-thumb {
+
+  background: var(--colorSelForest);
+}
+#vol-control-rain::-webkit-slider-runnable-track {
+
+  background: var(--colorSelRain);
+}
+#vol-control-rain::-webkit-slider-thumb {
+
+  background: var(--colorSelRain);
+}
+#vol-control-coffe::-webkit-slider-runnable-track {
+
+  background: var(--colorSelCoffe);
+}
+#vol-control-coffe::-webkit-slider-thumb {
+
+  background: var(--colorSelCoffe);
+
+}
+#vol-control-fire::-webkit-slider-runnable-track {
+
+  background: var(--colorSelFire);
+}
+#vol-control-fire::-webkit-slider-thumb {
+
+  background: var(--colorSelFire);
+}
